@@ -111,7 +111,7 @@ Task("GEN_ARTIFACTS")
     .IsDependentOn("NUGET_PACK");
 
 Task("CREATE_OCTO_RELEASE")
-    //.IsDependentOn("GEN_ARTIFACTS")
+    .IsDependentOn("GEN_ARTIFACTS")
     .IsDependentOn("OCTO_PUSH")
     .IsDependentOn("OCTO_RELEASE");
 
