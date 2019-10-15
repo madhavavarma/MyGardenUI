@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MyGardenUI"
+    }
+  },
+  "defaultProject": "MyGardenUI",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
