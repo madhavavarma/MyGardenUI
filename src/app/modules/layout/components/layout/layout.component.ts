@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { LayoutQuery } from '../../state/layout.query';
-import { LayoutService } from '../../state/layout.service';
 import { LayoutState } from '../../state/layout.store';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-layout',
@@ -13,7 +13,7 @@ export class LayoutComponent implements OnInit {
 
   constructor(
     public layoutQuery: LayoutQuery,
-    public layoutService: LayoutService,
+    public sharedService: SharedService,
     private router: Router,
     private activatedRoute: ActivatedRoute) {}
 
@@ -28,13 +28,15 @@ export class LayoutComponent implements OnInit {
           showSideNav: snapshotData.showSideNav !== false
         };
 
-        this.layoutService.updateLayout(layoutState);
+        this.sharedService.logService.info('Layout state modified', layoutState);
+
+        this.sharedService.layoutService.updateLayout(layoutState);
       }
     });
   }
 
   toggleSideNav() {
-    this.layoutService.toggleSideNav();
+    this.sharedService.layoutService.toggleSideNav();
   }
 
 }
