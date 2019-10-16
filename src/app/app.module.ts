@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './modules/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import { translocoLoader } from './transloco.loader';
+import { translocoLoader } from './services/transloco.loader';
 import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
 
 @NgModule({
