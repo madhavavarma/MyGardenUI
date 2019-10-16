@@ -11,16 +11,8 @@ export class SideNavComponent implements OnInit {
 
   @ViewChild('sidenav', {static: true}) sidenav: MatSidenav;
 
-  constructor(private layoutQuery: LayoutQuery) { }
-
   ngOnInit() {
     this.sidenav.open();
-  //   this.layoutQuery
-  //   .showSideNav$
-  //   .subscribe(showSideNav => showSideNav
-  //     ? this.sidenav.open()
-  //     : this.sidenav.close());
-  // }
   }
 }
 

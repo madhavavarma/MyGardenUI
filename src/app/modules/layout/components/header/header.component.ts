@@ -6,13 +6,7 @@ import { LayoutService } from '../../state/layout.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   @Input() showSideNavIcon: boolean;
   @Input() toggleSideNav: () => void;
-
-  constructor(private layoutService: LayoutService) { }
-
-  ngOnInit() {
-  }
 }
