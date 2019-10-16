@@ -14,7 +14,13 @@ export class SideNavComponent implements OnInit {
   constructor(private layoutQuery: LayoutQuery) { }
 
   ngOnInit() {
-    this.layoutQuery.showSideNav$.subscribe(showSideNav => showSideNav ? this.sidenav.open() : this.sidenav.close());
+    this.sidenav.open();
+  //   this.layoutQuery
+  //   .showSideNav$
+  //   .subscribe(showSideNav => showSideNav
+  //     ? this.sidenav.open()
+  //     : this.sidenav.close());
+  // }
   }
-
 }
+

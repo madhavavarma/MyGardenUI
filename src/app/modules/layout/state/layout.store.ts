@@ -3,12 +3,14 @@ import { Injectable } from '@angular/core';
 
 export interface LayoutState {
    showHeader: boolean;
+   showSideNavIcon: boolean;
    showSideNav: boolean;
 }
 
 export function createInitialState(): LayoutState {
   return {
-    showHeader: true,
+    showHeader: false,
+    showSideNavIcon: false,
     showSideNav: false
   };
 }

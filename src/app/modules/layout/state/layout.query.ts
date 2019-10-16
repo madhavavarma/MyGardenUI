@@ -9,11 +9,19 @@ export class LayoutQuery extends Query<LayoutState> {
         super(store);
     }
 
+    get layoutState() {
+        return this.getValue();
+    }
+
     get showHeader$() {
         return this.select(state => state.showHeader);
     }
 
     get showSideNav$() {
         return this.select(state => state.showSideNav);
+    }
+
+    get showSideNavIcon$() {
+        return this.select(state => state.showSideNavIcon);
     }
 }

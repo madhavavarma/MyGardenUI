@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LayoutService } from '../../state/layout.service';
 
 @Component({
@@ -8,13 +8,11 @@ import { LayoutService } from '../../state/layout.service';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input() showSideNavIcon: boolean;
+  @Input() toggleSideNav: () => void;
+
   constructor(private layoutService: LayoutService) { }
 
   ngOnInit() {
   }
-
-  toggleSideNav() {
-    this.layoutService.toggleSideNav();
-  }
-
 }
