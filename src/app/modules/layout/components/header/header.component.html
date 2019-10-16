@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <button mat-icon-button>
+      <button mat-icon-button *ngIf="showSideNavIcon">
         <mat-icon (click)="toggleSideNav()">menu</mat-icon>
       </button>
-      <h1>My Garden</h1>
+      <h1>Prop Centra</h1>
       <span class="menu-spacer"></span>
     </mat-toolbar-row>
   </mat-toolbar>

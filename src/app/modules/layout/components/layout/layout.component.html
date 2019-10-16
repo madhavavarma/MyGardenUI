@@ -1,3 +1,6 @@
 
-<app-header></app-header>
-<app-side-nav></app-side-nav>
+<app-header [showSideNavIcon]="this.layoutQuery.showSideNavIcon$ | async" 
+            [toggleSideNav]="this.toggleSideNav.bind(this)"
+            *ngIf="this.layoutQuery.showHeader$ | async"></app-header>
+            <ng-content></ng-content>
+<app-side-nav *ngIf="this.layoutQuery.showSideNav$ | async"></app-side-nav>
